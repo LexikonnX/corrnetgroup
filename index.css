@@ -11,3 +11,7 @@ a:hover {
 .card {
 	text-align: center;
 }
+.list-green {
+	background-color: #D1E7DD;
+	color: #157347;
+}
