@@ -20,6 +20,7 @@
 			<button style="width: 170px;" id="vehicles" class="mb-2 btn btn-success">Náš vozový park</button>
 			<button style="width: 170px;" id="management" class="mb-2 btn btn-success">Vedení</button>
 			<button style="width: 170px;" id="career" class="mb-2 btn btn-success">Kariéra</button>
+			<button style="width: 170px;" id="subsidiary" class="mb-2 btn btn-success">Naše společnosti</button>
 		</div>
 	</div>
 </div>
@@ -168,6 +169,71 @@
 			</div>
 		</center>
 	</div>
+	<div id="subsidiary_page">
+		<center>
+			<h3>DCEŘINÉ SPOLEČNOSTI A ZNAČKY</h3>
+			<div class="row">
+				<div class="col">
+					<a href="https://artic.leosight.cz/crnc.ic" target="_top">
+					<div class="card" style="width: 18rem;">
+					  <div class="card-body">
+					    <h5 class="card-title mb-2">CRN Cars</h5>
+					    <h6 class="card-subtitle">Autopůjčovna</h6>
+					    <p class="card-text text-muted">Spravuje Weximilian Alexei</p>
+					  </div>
+					</div>
+					</a>
+				</div>
+				<div class="col">
+					<div class="card" style="width: 18rem;">
+					  <div class="card-body">
+					    <h5 class="card-title mb-2">CRN Security</h5>
+					    <h6 class="card-subtitle">Profesionální ostraha</h6>
+					    <p class="card-text text-muted">Spravuje Zoe Corrnet</p>
+					  </div>
+					</div>
+				</div>
+				<div class="col">
+					<a href="https://artic.leosight.cz/roadx.ic" target="_top">
+					<div class="card" style="width: 18rem;">
+					  <div class="card-body">
+					    <h5 class="card-title mb-2">Road X</h5>
+					    <h6 class="card-subtitle">Elektronická kniha jízd</h6>
+					    <p class="card-text text-muted">Spravuje Zoe Corrnet</p>
+					  </div>
+					</div>
+					</a>
+				</div>
+				<div class="col">
+					<div class="card" style="width: 18rem;">
+					  <div class="card-body">
+					    <h5 class="card-title mb-2">Micorrnet</h5>
+					    <h6 class="card-subtitle">Výkonné mikročipy</h6>
+					    <p class="card-text text-muted">Spravuje Zoe Corrnet</p>
+					  </div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card" style="width: 18rem;">
+					  <div class="card-body">
+					    <h5 class="card-title mb-2">TONY CIGARETTES</h5>
+					    <h6 class="card-subtitle">Elektronické cigarety</h6>
+					    <p class="card-text text-muted">Spravuje Zoe Corrnet</p>
+					  </div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card" style="width: 18rem;">
+					  <div class="card-body">
+					    <h5 class="card-title mb-2">Vinyl Customs</h5>
+					    <h6 class="card-subtitle">Designové studio na autofólie</h6>
+					    <p class="card-text text-muted">Spravuje Zoe Corrnet</p>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</center>
+	</div>
 	<div id="vehicles_page">
 		<table class="table table-striped">
 			<thead>
@@ -254,30 +320,42 @@
 	$("#vehicles_page").hide();
 	$("#career_page").hide();
 	$("#management_page").hide();
+	$("#subsidiary_page").hide();
 
 	$("#about").click(function() {
 		$("#vehicles_page").hide();
 		$("#management_page").hide();
 		$("#career_page").hide();
+		$("#subsidiary_page").hide();
 		$("#about_page").show();
 	});
 	$("#vehicles").click(function() {
 		$("#about_page").hide();
 		$("#management_page").hide();
 		$("#career_page").hide();
+		$("#subsidiary_page").hide();
 		$("#vehicles_page").show();
 	});
 	$("#management").click(function() {
 		$("#about_page").hide();
 		$("#vehicles_page").hide();
 		$("#career_page").hide();
+		$("#subsidiary_page").hide();
 		$("#management_page").show();
 	});
 	$("#career").click(function() {
 		$("#about_page").hide();
 		$("#vehicles_page").hide();
 		$("#management_page").hide();
+		$("#subsidiary_page").hide();
 		$("#career_page").show();
+	});
+	$("#subsidiary").click(function() {
+		$("#about_page").hide();
+		$("#vehicles_page").hide();
+		$("#management_page").hide();
+		$("#career_page").hide();
+		$("#subsidiary_page").show();
 	});
 </script>
 </body>
