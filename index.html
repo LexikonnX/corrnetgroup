@@ -242,9 +242,7 @@
     </div>
   </section>
   <section class="container-fluid footer_section">
-    <p>
-      &copy; 2023 Všechna práva vyhrazena
-    </p>
+    <p>&copy; <span id="year">2023</span> Všechna práva vyhrazena</p>
   </section>
   <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="bootstrap.js"></script>
@@ -266,6 +264,14 @@
           items: 3
         }
       }
+    });
+    $.ajax({
+        url: 'https://lexikonn.cz/year.php',
+        method: 'POST',
+        dataType: 'text',
+        success: function(data) {
+            document.getElementById('year').innerHTML = data;
+        }
     });
   </script>
 </body>
