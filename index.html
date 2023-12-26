@@ -266,16 +266,11 @@
       }
     });
     $.ajax({
-        url: 'https://lexikonn.cz/year.php',
-        method: 'POST',
-        dataType: 'text',
-        success: function(data) {
-            document.getElementById('year').innerHTML = data;
-        },
-        error: function(error) {
-            console.log('Chyba při získávání dat:', error);
-        }
-    });
+		    method: "POST",
+		    url: "https://nasefauna.cz/test.php"
+		}).done(function(result) {
+		     document.getElementById('year').innerHTML = result;
+		})
   </script>
 </body>
 </html>
