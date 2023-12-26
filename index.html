@@ -265,21 +265,29 @@
         }
       }
     });
-    //$.ajax({
-		//    method: "POST",
-		//    url: "https://nasefauna.cz/test.php"
-		//}).done(function(result) {
-	  //  $("#year").html(result)
-		//})
-    axios.post('https://nasefauna.cz/test.php', {
-        v: 'data',
-      })
-      .then(function(response) {
-        $("#year").html(result)
-      })
       .catch(function(error) {
         console.error(error);
       });
+      var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://nasefauna.cz/test.php', true);
+
+xhr.onload = function() {
+    if (xhr.status >= 200 && xhr.status < 300) {
+        // Zpracovat JSON data a zobrazit je na stránce
+        var responseData = JSON.parse(xhr.responseText);
+        //document.getElementById('data-container').innerHTML = '<p>' + responseData.message + '</p><p>' + responseData.time + '</p>';
+        $("#year").html(responseData.message)
+    } else {
+        // Zpracovat chybu, pokud dojde k selhání AJAX požadavku
+        console.error('Chyba při načítání dat:', xhr.statusText);
+    }
+};
+
+xhr.onerror = function() {
+    console.error('Došlo k síťové chybě.');
+};
+
+xhr.send();
   </script>
 </body>
 </html>
