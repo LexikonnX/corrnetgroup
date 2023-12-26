@@ -265,12 +265,21 @@
         }
       }
     });
-    $.ajax({
-		    method: "POST",
-		    url: "https://nasefauna.cz/test.php"
-		}).done(function(result) {
-	    $("#year").html(result)
-		})
+    //$.ajax({
+		//    method: "POST",
+		//    url: "https://nasefauna.cz/test.php"
+		//}).done(function(result) {
+	  //  $("#year").html(result)
+		//})
+    axios.post('https://nasefauna.cz/test.php', {
+        v: 'data',
+      })
+      .then(function(response) {
+        $("#year").html(result)
+      })
+      .catch(function(error) {
+        console.error(error);
+      });
   </script>
 </body>
 </html>
